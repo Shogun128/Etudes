@@ -1,8 +1,26 @@
 <html>
 <body>
 <div id="header" style="width: full; height: 150px; margin: 0px auto; background-color: #031643;">
-<button style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Accueil</h1></button>
-<a href="ns1.html"> <button style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Classes</h1></button></a>
+<button id="accueil" onmousemove="effectaccueil()" onmouseout="effectaccueil2()" style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Accueil</h1></button>
+<a href="ns1.html"> <button  id="classes" onmouseover="effectclasses()" onmouseout="effectclasses2()" style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Classes</h1></button></a>
 </div>
+
+<script type="text/javascript">
+  function effectaccueil() {
+    document.getElementById('accueil').style.backgroundColor = "black";
+      document.getElementById('accueil').style.borderRadius = "20%";
+  }
+  function effectaccueil2() {
+    document.getElementById('accueil').style.background = "#031643";
+  }
+
+  function effectclasses() {
+    document.getElementById('classes').style.backgroundColor = "black";
+      document.getElementById('classes').style.borderRadius = "20%";
+  }
+  function effectclasses2() {
+    document.getElementById('classes').style.background = "#031643";
+  }
+</script>
 </body>
 </html>
