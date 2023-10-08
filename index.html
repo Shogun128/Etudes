@@ -58,9 +58,11 @@ function checkCookie() {
   let theme = getCookie("theme");
   if (theme != "" && theme != null && theme != "light") {
    setCookie("light")
+   document.getElementById('header').style.backgroundColor = "#031643";
   }
   else if (theme!= "" && theme != null && theme != "dark") {
     setCookie("dark");
+    document.getElementById('header').style.backgroundColor = "gray";
   }
   else {
     setCookie("light");
