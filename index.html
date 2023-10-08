@@ -29,9 +29,12 @@
 </script>
 
 <script type="text/javascript">
-  document.cookie = "username=jacob;";
+
+function setCookie(cname) {
+  document.cookie = "theme=" + cname;
   let x = document.cookie;
   console.log(x);
+}
 
 
   function getCookie(cname) {
@@ -52,14 +55,15 @@
 
 
 function checkCookie() {
-  let username = getCookie("username");
-  if (username != "") {
-   console.log("Welcome again " + username);
-  } else {
-    username = prompt("Please enter your name:", "");
-    if (username != "" && username != null) {
-      setCookie("username", username, 365);
-    }
+  let theme = getCookie("theme");
+  if (theme != "" && theme != light) {
+   setCookie("light")
+  }
+  else if (theme!= "" && theme != dark) {
+    setCookie("dark");
+  }
+  else {
+    console.log(theme);
   }
 
 }
