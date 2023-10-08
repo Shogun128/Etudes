@@ -56,10 +56,10 @@ function setCookie(cname) {
 
 function checkCookie() {
   let theme = getCookie("theme");
-  if (theme != "" && theme != null && theme != light) {
+  if (theme != "" && theme != null && theme != "light") {
    setCookie("light")
   }
-  else if (theme!= "" && theme != null && theme != dark) {
+  else if (theme!= "" && theme != null && theme != "dark") {
     setCookie("dark");
   }
   else {
