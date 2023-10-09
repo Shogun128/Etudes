@@ -1,5 +1,5 @@
 <html>
-<body onload="checkCookie()">
+<body onload="themeCheck()">
 <div id="header" style="width: full; height: 150px; margin: 0px auto; background-color: #031643;">
 <button id="accueil" onmousemove="effectaccueil()" onmouseout="effectaccueil2()" style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Accueil</h1></button>
 <a href="ns1.html"> <button  id="classes" onmouseover="effectclasses()" onmouseout="effectclasses2()" style="width: 200px; height: 100px;background-color: #031643;color: #00cfff; border-color: transparent;"><h1>Classes</h1></button></a>
@@ -68,6 +68,19 @@ function checkCookie() {
     setCookie("light");
   }
 
+}
+
+function themeCheck() {
+  let theme = getCookie("theme");
+  if (theme != "" && theme != null && theme != "light") {
+   document.getElementById('header').style.backgroundColor = "gray";
+  }
+  else if (theme!= "" && theme != null && theme != "dark") {
+    document.getElementById('header').style.backgroundColor = "#031643";
+  }
+  else {
+    setCookie("light");
+  }
 }
 </script>
 </body>
